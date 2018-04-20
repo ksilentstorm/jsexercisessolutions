@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"">
+
+	<title>JS Exercises</title>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+
+<!-- ************************************************* START BODY ******************************************************** -->
+<body>
+
+<div class="col-12 bg-info p-3 text-center fixed-top" style="box-shadow: 0px 2px 12px rgba(0,0,0,0.25)">
+	<h4 class="text-white">W3Resource JavaScript Exercises Solution</h4>
+</div>
+
+<div class="" style="margin-top: 6rem;"></div>
+
+<div class="col-12 mt-5">
+
+	<div class="container mt-5">
+		
+		<div class="row">
+			<!-- **************** EXERCISE 1 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 1</h5>
+				<h5 class="font-weight-normal">1. Write a JavaScript program to display the current day and time in the following format.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<h5 class="d-inline">Current Day is :</h5>
+					<h5 class="d-inline text-primary" id="day"></h5>
+						<br>
+					<h5 class="d-inline">Current Time is :</h5>
+					<h5 class="d-inline text-primary" id="time"></h5>
+						<br>
+					<button class="btn btn-success mt-3" onclick="timedate()"> Click Me!</button>
+				</div>
+			</div>
+			
+			<!-- **************** EXERCISE 2 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 2</h5>
+				<h5 class="font-weight-normal">2. Write a JavaScript program to print the contents of the current window. Answer is given below.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<h5>Click here to print the webpage.</h5>
+					<button class="btn btn-success mt-3"  onclick="printMe()"> Print! </button>
+				</div>
+			</div>
+
+			<!-- **************** EXERCISE 3 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 3</h5>
+				<h5 class="font-weight-normal">3. Write a JavaScript program to get the current date.
+	Expected Output : mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<h5>Today is :</h5>
+					<h5 class="text-primary" id="todayDate"></h5>
+					<button class="btn btn-success mt-3"  onclick="todayDate()"> Click Here! </button>
+				</div>
+			</div>
+		</div>
+		
+		<hr>
+
+		<div class="row">
+			<!-- **************** EXERCISE 4 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 4</h5>
+				<h5 class="font-weight-normal">4. Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<h5 class="d-inline">Area of the triangle is :</h5>
+					<h5 class="d-inline text-primary" id="area"></h5>
+					<br>
+					<button class="btn btn-success mt-3"  onclick="areaOfTriangle()"> Click Here! </button>
+				</div>
+			</div>
+			
+			<!-- **************** EXERCISE 5 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 5</h5>
+				<h5 class="font-weight-normal">5. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<h5 id="target">W3Resource</h5>
+					<button class="btn btn-success mt-3"  onclick="reverseMe('target')"> Reverse! </button>
+				</div>
+			</div>
+
+			<!-- **************** EXERCISE 6 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 6</h5>
+				<h5 class="font-weight-normal">6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="c-textbox" placeholder="Enter Leap Year" id="getYear">
+					<h5>This year is :</h5>
+					<h5 class="text-primary" id="leapYear"></h5>
+					<button class="btn btn-success mt-3"  onclick="checkLeapYear()"> Click to Know! </button>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+		
+		<div class="row">
+			<!-- **************** EXERCISE 7 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 7</h5>
+				<h5 class="font-weight-normal">7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<h5 class="d-inline text-primary" id="January"></h5>
+					<br>
+					<button class="btn btn-success mt-3"  onclick="checkSunday()"> Click Me! </button>
+				</div>
+			</div>
+			
+			<!-- **************** EXERCISE 8 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 8</h5>
+				<h5 class="font-weight-normal">8. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched". </h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="c-textbox" placeholder="Enter any number between 1 to 10" id="guessNumber">
+					<h5 id="result"></h5>
+					<h5 id="trueResult"></h5>
+					<button class="btn btn-success mt-3"  onclick="checkResult()"> Check Result! </button>
+				</div>
+			</div>
+
+			<!-- **************** EXERCISE 9 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 9</h5>
+				<h5 class="font-weight-normal">9. Write a JavaScript program to calculate days left until next Christmas.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<h5>Check How many days are left for Christmas.</h5>
+					<h5 class="text-primary" id="days"></h5>
+					<button class="btn btn-success mt-3"  onclick="checkDays()"> Click to Know! </button>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+		
+		<div class="row">
+			<!-- **************** EXERCISE 10 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 10</h5>
+				<h5 class="font-weight-normal">10. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="mb-2 c-textbox" placeholder="Number 1" id="number1">
+					<input type="text" name="" class="mb-2 c-textbox" placeholder="Number 2" id="number2">
+					<br>
+					Multiplication :
+					<h5 class="text-primary" id="printMultiply"></h5>
+					Division :
+					<h5 class="text-primary" id="printDivide"></h5>
+					<br>
+					<button class="btn btn-success"  onclick="doMultiply()"> Multiplay Them! </button>
+					<button class="btn btn-success"  onclick="doDivide()"> Divide Them! </button>
+				</div>
+			</div>
+			
+			<!-- **************** EXERCISE 11 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 11</h5>
+				<h5 class="font-weight-normal">11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit. </h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<div class="row">
+						<div class="col-sm-6 text-center">
+							<input type="text" name="" class="c-textbox" placeholder="Celsius" id="fromCelsius">
+							<br>
+							<span class="fa fa-arrow-down align-center"></span>
+							<br>
+							<input type="text" name="" class="c-textbox" placeholder="Fahrenheit" id="toFahrenheit">
+							<br>
+							<button class="btn btn-success mt-3"  onclick="doCtoF()"> Convert Them! </button>
+						</div>
+						<div class="col-sm-6 text-center">
+							<input type="text" name="" class="c-textbox" placeholder="Fahrenheit" id="fromFahrenheit">
+							<br>
+							<span class="fa fa-arrow-down align-center"></span>
+							<br>
+							<input type="text" name="" class="c-textbox" placeholder="Celsius" id="toCelsius">
+							<br>
+							<button class="btn btn-success mt-3"  onclick="doFtoC()"> Convert Them! </button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- **************** EXERCISE 12 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 12</h5>
+				<h5 class="font-weight-normal">12. Write a JavaScript program to get the website URL (loading page).</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<p class="text-primary" id="url" style="word-break: break-all;"></p>
+					<button class="btn btn-success mt-3"  onclick="getURL()"> Display URL! </button>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+		
+		<div class="row">
+			<!-- **************** EXERCISE 13 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 13</h5>
+				<h5 class="font-weight-normal">13. Write a JavaScript exercise to create a variable using a user-defined name.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="c-textbox" placeholder="Enter Variable Name" id="variable">
+					<button class="btn btn-success mt-3"  onclick="getVariable()"> Click here! </button>
+					<h5 id="text-variable">
+					</h5>
+				</div>
+			</div>
+			<!-- **************** EXERCISE 14 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 14</h5>
+				<h5 class="font-weight-normal">14. Write a JavaScript exercise to get the extension of a filename.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="c-textbox" placeholder="Enter Variable Name" id="inputExtension">
+					<button class="btn btn-success mt-3"  onclick="getExtension()"> Click here! </button>
+					<h5 id="displayExtension">
+					</h5>
+				</div>
+			</div>
+			<!-- **************** EXERCISE 15 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 15</h5>
+				<h5 class="font-weight-normal">15. Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="c-textbox" placeholder="Enter Number" id="inputNumber">
+					<h5 class="d-inline"> Difference with 13 is : </h5>
+					<h5 class="d-inline text-primary" id="displayDifference"></h5>
+					<button class="btn btn-success mt-3 d-block"  onclick="getDifference()"> Click here! </button>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="row">
+			<!-- **************** EXERCISE 16 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 16</h5>
+				<h5 class="font-weight-normal">16. Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="mt-2 c-textbox" placeholder="Enter Number" id="inputNumber1">
+					<input type="text" name="" class="mt-2 c-textbox" placeholder="Enter Number" id="inputNumber2">
+					<h5 class="d-inline"> Addition of two integers is : </h5>
+					<h5 class="d-inline text-primary" id="displaySum"></h5>
+					<button class="btn btn-success mt-3 d-block"  onclick="getSum()"> Click here! </button>
+				</div>
+			</div>
+			<!-- **************** EXERCISE 17 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 17</h5>
+				<h5 class="font-weight-normal">17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="c-textbox" placeholder="Enter Number" id="inputNumber3">
+					<h5 class="d-inline-block"> Difference with 19 is : </h5>
+					<h5 class="d-inline-block text-primary" id="displayDifference3"></h5>
+					<button class="btn btn-success mt-3 d-block"  onclick="getDifference3()"> Click here! </button>
+				</div>
+			</div>
+			<!-- **************** EXERCISE 18 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 18</h5>
+				<h5 class="font-weight-normal">18. Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="mt-2 c-textbox" placeholder="Enter Number" id="inputNumber4">
+					<input type="text" name="" class="mt-2 c-textbox" placeholder="Enter Number" id="inputNumber5">
+					<h5 class="d-inline"> Result is : </h5>
+					<h5 class="d-inline text-primary" id="displayNumResult"></h5>
+					<button class="btn btn-success mt-3 d-block"  onclick="getCheck50()"> Check Numbers </button>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="row">
+			<!-- **************** EXERCISE 19 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 19</h5>
+				<h5 class="font-weight-normal">19. Write a JavaScript program to check a given integer is within 20 of 100 or 400. </h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="mt-2 c-textbox" placeholder="Enter Number" id="inputNumber6">
+					<h5 class="d-inline mt-2"> Output String is : </h5>
+					<h5 class="d-inline text-primary" id="displayNumberStatus"></h5>
+					<button class="btn btn-success mt-3 d-block"  onclick="displayNumberStatus()"> Click here! </button>
+				</div>
+			</div>
+			<!-- **************** EXERCISE 20 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 20</h5>
+				<h5 class="font-weight-normal">20. Write a JavaScript program to check from two given integers, if one is positive and one is negative.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="c-textbox" placeholder="Enter Number" id="inputString6">
+					<input type="text" name="" class="c-textbox" placeholder="Enter Number" id="inputString7">
+					<h5 class="d-inline-block"> New String Is : </h5>
+					<h5 class="d-inline-block text-primary" id="newString"></h5>
+					<button class="btn btn-success mt-3 d-block"  onclick="removeChar()"> Click here! </button>
+				</div>
+			</div>
+			<!-- **************** EXERCISE 21 ******************** -->
+			<div class="col-12 col-sm-6 col-md-4">
+				<h5 class="font-weight-bold">EXERCISE 21</h5>
+				<h5 class="font-weight-normal">21. Write a JavaScript program to create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string.</h5>
+				<hr>
+				<div class="col-12 c-solution-box">
+					<input type="text" name="" class="mt-2 c-textbox" placeholder="Enter Number" id="inputNumber4">
+					<input type="text" name="" class="mt-2 c-textbox" placeholder="Enter Number" id="inputNumber5">
+					<h5 class="d-inline"> Result is : </h5>
+					<h5 class="d-inline text-primary" id="displayNumResult"></h5>
+					<button class="btn btn-success mt-3 d-block"  onclick="getCheck50()"> Check Numbers </button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="js/custom.js"></script>
+
+</body>
+<!-- *************************************************** END BODY ******************************************************* -->
+
+</html>
